@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 仮想環境
+venv/
+env/
+ENV/
+
+# 環境設定
+.env
+*.env
+config.ini
+secrets.yaml
+
+# IDEとエディタ
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ログと一時ファイル
+*.log
+logs/
+tmp/
+temp/
+
+# OS固有
+.DS_Store
+Thumbs.db
+
+# プロジェクト固有
+app/core/secrets.py
+sensitive_data/
+
+# 依存関係
+pip-log.txt
+pip-delete-this-directory.txt
+
+# テストとカバレッジ
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# ドキュメンテーション
+docs/_build/
+
+# ディストリビューションとパッケージング
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
