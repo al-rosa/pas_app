@@ -1,4 +1,4 @@
-# PAS (Python Automation System) Project
+# PAS (Produce Administer Submit) Project
 
 This FastAPI project integrates Notion, YouTube, and Claude APIs to automate content creation and management workflows. It provides both API endpoints and CLI tools for seamless interaction with these services.
 
@@ -89,6 +89,64 @@ To run the test suite:
 ```
 pytest
 ```
+
+## Architecture Diagram
+```
+┌─────────────────┐
+│    Interface    │
+│  (Presentation) │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│   Application   │
+│    (Use Cases)  │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│     Domain      │
+│ (Business Logic)│
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Infrastructure  │
+│  (Data Sources) │
+└─────────────────┘
+```
+
+## Role of Each Layer
+
+### Interface Layer (`interface/`)
+
+**Role:** Responsible for interactions with the user interface  
+**Components:** API endpoints, CLI commands, GUI (future)  
+**Dependencies:** Application Layer  
+
+### Application Layer (`application/`)
+
+**Role:** Coordination and orchestration of use cases  
+**Components:** Application services  
+**Dependencies:** Domain Layer  
+
+### Domain Layer (`domain/`)
+
+**Role:** Defines business logic and rules  
+**Components:** Entities, value objects, domain services, repository interfaces  
+**Dependencies:** None (innermost layer)  
+
+### Infrastructure Layer (`infrastructure/`)
+
+**Role:** Interaction with external systems, data access  
+**Components:** Repository implementations, external API clients  
+**Dependencies:** Domain Layer (implements interfaces)  
+
+### Core (`core/`)
+
+**Role:** Common utilities and configuration  
+**Components:** Configuration management, custom exceptions, common utilities  
+
+---
+
+This structure outlines the responsibilities and dependencies of each layer in a clean architecture, ensuring a well-organized and maintainable codebase.
 
 ## Contributing
 

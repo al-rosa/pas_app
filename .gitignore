@@ -73,3 +73,6 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+# appディレクトリ以下のREADME.mdファイルは除外する
+app/**/README.md
